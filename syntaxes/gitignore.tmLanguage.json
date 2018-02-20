@@ -6,7 +6,7 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -16,8 +16,8 @@
 				"match": "(\\*)"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.gitignore",
+		"comments": {
+			"name": "comment.line.gitignore",
 			"begin": "# ",
 			"end": "$",
 			"patterns": [
