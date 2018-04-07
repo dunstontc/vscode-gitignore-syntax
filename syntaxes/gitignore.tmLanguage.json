@@ -1,28 +1,74 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "gitignore",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#comments"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.glob",
-				"match": "(\\*)"
-			}]
-		},
-		"comments": {
-			"name": "comment.line.gitignore",
-			"begin": "# ",
-			"end": "$",
-			"patterns": [
-			]
-		}
-	},
-	"scopeName": "source.gitignore"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "gitignore",
+    "scopeName": "source.gitignore",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#constant"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#punctuation"
+        },
+        {
+            "include": "#variable"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "name": "comment.line.gitignore",
+            "begin": "#+\\s?",
+            "end": "$",
+            "patterns": []
+        },
+        "constant": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape",
+                    "match": "\\\\[#*!? ]"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.glob.gitignore",
+                    "match": "(\\*{2})"
+                },
+                {
+                    "name": "keyword.control.wildcard.gitignore",
+                    "match": "((\\?|\\*){1})"
+                },
+                {
+                    "name": "keyword.control.negation.gitignore",
+                    "match": "([!])"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.definition.variable.begin.gitignore",
+                    "match": "(\\[)"
+                },
+                {
+                    "name": "punctuation.definition.variable.end.gitignore",
+                    "match": "(])"
+                }
+            ]
+        },
+        "variable": {
+          "patterns": [
+            {
+                "name": "variable.other.range",
+                "match": "(?<=\\[)([a-zA-Z0-9.\\-_]+)(?=\\])"
+            }
+          ]
+        }
+    }
 }

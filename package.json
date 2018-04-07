@@ -2,25 +2,45 @@
     "name": "vscode-gitignore-syntax",
     "displayName": "vscode-gitignore-syntax",
     "description": "Language support for .gitignore files.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "dunstontc",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dunstontc/vscode-gitignore-syntax.git"
+    },
     "engines": {
         "vscode": "^1.20.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
+    "galleryBanner": {
+      "color": "#569cd6",
+      "theme": "dark"
+    },
+    "icon": "assets/gitignore.png",
     "contributes": {
-        "languages": [{
-            "id": "gitignore",
-            "aliases": ["gitignore", "gitignore"],
-            "extensions": ["gitignore"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "gitignore",
-            "scopeName": "gitignore",
-            "path": "./syntaxes/gitignore.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "gitignore",
+                "aliases": [
+                    "gitignore",
+                    "Gitignore"
+                ],
+                "extensions": [
+                    "gitignore",
+                    ".gitignore"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "gitignore",
+                "scopeName": "source.gitignore",
+                "path": "./syntaxes/gitignore.tmLanguage.json"
+            }
+        ]
     }
 }
