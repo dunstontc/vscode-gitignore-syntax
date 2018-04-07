@@ -1,8 +1,8 @@
 {
     "name": "vscode-gitignore-syntax",
     "displayName": "vscode-gitignore-syntax",
-    "description": "Language support for .gitignore files.",
-    "version": "0.1.0",
+    "description": "Syntax highlighting for .gitignore files.",
+    "version": "0.1.1",
     "publisher": "dunstontc",
     "license": "MIT",
     "repository": {
