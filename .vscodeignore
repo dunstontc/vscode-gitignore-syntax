@@ -1,3 +1,5 @@
+*.vsix
+vsix/**
 .vscode/**
 .vscode-test/**
 .gitignore
