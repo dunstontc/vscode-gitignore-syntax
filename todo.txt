@@ -1,0 +1,2 @@
+2018-04-07 Find a group to contain negative matches.
+2018-04-07 Define negative pattern matches (ex: [!abc]).
